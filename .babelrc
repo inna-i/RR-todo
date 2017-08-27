@@ -1,0 +1,15 @@
+{
+  "presets": [
+    ["es2015", { "modules": false }],
+    "react"
+  ],
+  "ignore": [
+    "**/**/*.css"
+  ],
+  "plugins": [
+    "transform-export-extensions",
+    "transform-class-properties",
+    "transform-object-assign",
+    "transform-object-rest-spread"
+  ]
+}
