@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react'
-import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
+import TodoActionCreator from '../actions/TodoActionCreator';
 
 let AddTodo = props => {
 	let input
@@ -40,7 +40,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		onSubmitClick: text => dispatch(addTodo(text)),
+		onSubmitClick: text => dispatch(TodoActionCreator.addTodo(text)),
 	}
 }
 

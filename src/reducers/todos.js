@@ -16,6 +16,13 @@ const todos = (state = [], action) => {
 					? {...todo, completed: !todo.completed}
 					: todo
 			)
+		case 'FETCH_TODOS_SUCCESS':
+			return [
+				...state,
+				{
+					todos: action.payload,
+				}
+			]
 		default:
 			return state
 	}

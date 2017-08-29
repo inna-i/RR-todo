@@ -7,8 +7,6 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 	inject: 'body'
 });
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 module.exports = {
 	entry: './src/index.js',
 	output: {
@@ -38,5 +36,15 @@ module.exports = {
 	},
 	plugins: [
 		HtmlWebpackPluginConfig,
-	]
+	],
+	devServer: {
+		contentBase: './webpack-static',
+		port: 6006,
+		headers: { 'Access-Control-Allow-Origin': '*' },
+		historyApiFallback: {
+			rewrites: [
+				{ from: /./, to: '/' },
+			],
+		},
+	},
 }

@@ -6,7 +6,7 @@
   "author": "Inna Ivashchuk innes333@gmail.com",
   "scripts": {
     "build": "./node_modules/webpack/bin/webpack.js -p",
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline"
+    "start": "webpack-dev-server --hot --progress --colors --inline"
   },
   "devDependencies": {
     "babel-core": "6.13.2",
